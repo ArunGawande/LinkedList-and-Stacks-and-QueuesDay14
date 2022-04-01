@@ -18,9 +18,7 @@ public class LinkedListMain
         myLinkedList.insertWithKey(valueOfPreviousNode, nodeToBeInserted);
         INode deletedNode = myLinkedList.deleteNodeWithKey(40);
         System.out.println("The deleted key value is:"+deletedNode.getKey());
-        int listSize = myLinkedList.size();
         myLinkedList.printLinkedList();
-        System.out.println("The size of the linked list is : "+listSize);
 
     }
 }
