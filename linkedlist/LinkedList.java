@@ -118,17 +118,6 @@ public class LinkedList
         }
     }
 
-    public int size() {
-        int numberOfNode = 0;
-        INode temporaryNode = this.head;
-        while(temporaryNode!=null ) {
-
-            temporaryNode = temporaryNode.getNext();
-            numberOfNode++;
-        }
-        return numberOfNode;
-    }
-
     public void printLinkedList () {
         System.out.println("My Nodes: "+head);
     }
