@@ -1,6 +1,7 @@
 package com.bridgelabz.linkedlist;
 
-public class LinkedList {
+public class LinkedList
+{
 
     private INode head;
     private INode tail;
@@ -54,26 +55,34 @@ public class LinkedList {
 
     }
 
-//    public INode popLast()
-//    {
-//        INode tempNode = head;
-//        while (!tempNode.getNext().equals((tail))){
-//            tempNode = tempNode.getNext();
-//        }
-//        this.tail = tempNode;
-//        tempNode = tempNode.getNext();
-//        return tempNode;
-//    }
-public INode deleteLastNode() {
-    INode temporaryNode = head;
-    while(!temporaryNode.getNext().equals(tail)) {
+    public INode deleteLastNode() {
+        INode temporaryNode = head;
+        while(!temporaryNode.getNext().equals(tail)) {
+            temporaryNode = temporaryNode.getNext();
+        }
+        this.tail = temporaryNode;
         temporaryNode = temporaryNode.getNext();
+        return temporaryNode;
     }
-    this.tail = temporaryNode;
-    temporaryNode = temporaryNode.getNext();
-    return temporaryNode;
-}
 
+    public INode search(int key) {
+        INode temporaryNode = head;
+        boolean isFound = false;
+        while (temporaryNode != null  && isFound == false) {
+            if(temporaryNode.getKey().equals(key)) {
+                isFound = true;
+            }
+            else {
+
+                temporaryNode = temporaryNode.getNext();
+            }
+        }
+        if(isFound)
+            return temporaryNode;
+        else {
+            return head;
+        }
+    }
 
     public void printLinkedList () {
         System.out.println("My Nodes: "+head);
