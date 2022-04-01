@@ -14,12 +14,15 @@ public class LinkedListMain
         myLinkedList.append(thirdNode);
         myLinkedList.insert(firstNode, secondNode);
 
+//        myLinkedList.popLast();
+//        //myLinkedList.printMyNodes();
+//        boolean result = myLinkedList.head.equals(firstNode) &&
+//                myLinkedList.tail.equals(secondNode);
+//        myLinkedList.assertTrue(result);
         System.out.println("Linked list before deletion: ");
         myLinkedList.printLinkedList();
-        INode deletedNode = myLinkedList.deleteFirst();
+        INode deletedNode = myLinkedList.deleteLastNode();
         System.out.println("The deleted key value is:"+deletedNode.getKey());
-        System.out.println("Final linked list is:");
-        myLinkedList.printLinkedList();
 
     }
 }
