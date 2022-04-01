@@ -48,6 +48,20 @@ public class LinkedList
         newNode.setNext(temporaryNode);
     }
 
+    public void insertWithKey(int key, INode newNode) {
+
+        INode nodeWithKeyValue = search(key);
+        if(nodeWithKeyValue.getKey().equals(key)) {
+            INode temporaryNode = nodeWithKeyValue.getNext();
+            nodeWithKeyValue.setNext(newNode);
+            newNode.setNext(temporaryNode);
+        }
+        else {
+            System.out.println("Key Node Found");
+        }
+
+    }
+
     public INode deleteFirst() {
         INode temporaryNode = this.head;
         this.head = this.head.getNext();
